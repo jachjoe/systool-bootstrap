@@ -9,12 +9,12 @@ SYSTEMTOOLS_DIR=${TOOLS_ROOT}/systemtools
 function clone_systemtools {
   sudo apt update
   sudo apt -y install git
-  mkdir -p ${TOOLS_ROOT}
-  git -C ${TOOLS_ROOT} clone https://github.com/jachjoe/systemtools.git
+  mkdir -p "${TOOLS_ROOT}"
+  git -C "${TOOLS_ROOT}" clone https://github.com/jachjoe/systemtools.git
 }
 
 function run_setup {
-  /bin/bash ${SYSTEMTOOLS_DIR}/utils/systool.sh setup
+  /bin/bash "${SYSTEMTOOLS_DIR}"/utils/systool.sh setup
 }
 
 # Run bootstrap
